@@ -1,0 +1,25 @@
+{
+  "name": "im",
+  "version": "1.0.0",
+  "description": "跨平台的实时聊天，react-native、小程序、web。",
+  "main": "main.js",
+  "scripts": {
+    "dev": "parcel -p 8888 ./public/index.html --open",
+    "build": "parcel build ./src/main.ts --out-file im.js -d build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/25juan/im.git"
+  },
+  "author": "25juan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/25juan/im/issues"
+  },
+  "homepage": "https://github.com/25juan/im#readme",
+  "dependencies": {
+    "parcel-bundler": "^1.12.4",
+    "typescript": "^4.0.5"
+  }
+}
