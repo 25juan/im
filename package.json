@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "parcel -p 8888 ./public/index.html --open",
     "build": "parcel build ./src/main.ts --out-file im.js -d build",
+    "doc": "./node_modules/.bin/typedoc --out docs src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +21,7 @@
   "homepage": "https://github.com/25juan/im#readme",
   "dependencies": {
     "parcel-bundler": "^1.12.4",
+    "typedoc": "^0.19.2",
     "typescript": "^4.0.5"
   }
 }
