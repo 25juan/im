@@ -5,6 +5,7 @@
   "main": "main.js",
   "scripts": {
     "dev": "parcel -p 8888 ./public/index.html --open",
+    "start": "parcel -p 8888 ./public/index.html --open",
     "build": "parcel build ./src/main.ts --out-file im.js -d build",
     "doc": "./node_modules/.bin/typedoc --out docs src",
     "test": "echo \"Error: no test specified\" && exit 1"
