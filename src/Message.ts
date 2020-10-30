@@ -1,20 +1,24 @@
 import Socket from "./Socket" ;
-import {LoginUser, Password, RegisterUser, UserInfo} from "./interface" ;
+import {LoginUser,MessageOption, Password, RegisterUser, UserInfo} from "./interface" ;
 
-interface Option {
-  appKey: string,
-  isDebug: boolean,
-  remote: boolean,
-}
+
+
+/**
+ * 实时聊天对象
+ * ```javascript
+ * var option = { appKey: "", isDebug: true, remote: true } ;
+ * var message = new Message(option);
+ * ```
+ */
 class Message {
-  private option: Option ;
+  private option: MessageOption ;
   private _isInit: boolean ;
   private socket: Socket ;
 
   /**
    * @param option 初始化message参数
    */
-  constructor(option: Option){
+  constructor(option: MessageOption){
     this.option = option ;
     this.init();
   }
@@ -26,6 +30,9 @@ class Message {
     return this._isInit ;
   }
 
+  /**
+   * @ignore
+   */
   private init():void{
     this._isInit = true ;
     this.socket = new Socket();

@@ -1,5 +1,25 @@
+export interface MessageOption {
+  /**
+   * 管理端申请的appKey
+   */
+  appKey: string,
+  /**
+   * 是否处于开发模式
+   */
+  isDebug: boolean,
+  /**
+   * 是否开启漫游，漫游将会同步拉取各个端的历史消息
+   */
+  remote: boolean,
+}
 export interface LoginUser {
+  /**
+   * 用户名
+   */
   username: string,
+  /**
+   * 密码
+   */
   password: string,
 };
 
