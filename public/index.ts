@@ -1,2 +1,2 @@
-import Hello from "../src/main" ;
-console.log(Hello,"sss");
+import AIM from "../src/AIM" ;
+

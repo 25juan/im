@@ -1,5 +1,16 @@
 import Socket from "./Socket" ;
-import {ErrorRet, LoginUser, MessageOption, Password, RegisterUser, UserInfo} from "./interface" ;
+import {
+  ErrorRet,
+  LoginUser,
+  SendMessage,
+  Message,
+  MessageOption,
+  Password,
+  RegisterUser, RetractMessage,
+  User,
+  UserInfo,
+  UserRet, MessagePagination
+} from "./interface" ;
 
 
 
@@ -87,4 +98,76 @@ class AIM {
       resolve(null)
     })
   }
+  /**
+   * 获取当前登录的用户信息
+   * @returns 返回一个携带用户信息的promise对象，
+   */
+  public getUserInfo(userRet: UserRet ):Promise<UserInfo>{
+    return new Promise<UserInfo>((resolve, reject) => {
+      resolve(null)
+    })
+  }
+
+  /**
+   * 更新用户头像
+   * @param base64 头像的base64字符串编码
+   * @returns 返回一个promise对象 true表示更新成功,false表示更新失败
+   */
+  public updateMyAvatar(base64:string):Promise<boolean>{
+    return new Promise<boolean>((resolve, reject) => {
+      resolve(null)
+    })
+  }
+
+  /**
+   * 更新用户信息
+   * @param base64 头像的base64字符串编码
+   * @returns 返回一个promise对象 true表示更新成功,false表示更新失败
+   */
+  public updateMyInfo(user:User):Promise<boolean>{
+    return new Promise<boolean>((resolve, reject) => {
+      resolve(null)
+    })
+  }
+  /**
+   * 发送消息
+   * @param message 发送的消息对象
+   * @returns 返回一个promise对象 true表示更新成功,false表示更新失败
+   */
+  public sendMessage(message:SendMessage):Promise<null>{
+    return new Promise<null>((resolve, reject) => {
+      resolve(null)
+    })
+  }
+  /**
+   * 测回消息
+   * @param message 测回的消息对象为空表示测回成功
+   */
+  public retractMessage(message:RetractMessage):Promise<null | ErrorRet>{
+    return new Promise<null | ErrorRet>((resolve, reject) => {
+      resolve(null)
+    })
+  }
+  /**
+   * 上传资源文件到服务器
+   * @param formData 上传到服务器的formData 对象
+   * @returns 返回文件对应的服务器端的文件id
+   */
+  public uploadResource(formData: any):Promise<string | ErrorRet>{
+    return new Promise<null | ErrorRet>((resolve, reject) => {
+      resolve(null)
+    });
+  }
+
+  /**
+   * 获取历史消息记录
+   * @returns 返回历史消息的数组
+   */
+  public getHistoryMessages(pagination: MessagePagination):Promise<[Message]>{
+    return new Promise<[Message]>((resolve, reject) => {
+      resolve(null)
+    });
+  }
+
 }
+export default AIM ;

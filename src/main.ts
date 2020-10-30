@@ -1,4 +1,1 @@
-
-
-
-export default {}
+import AIM from "./AIM";
