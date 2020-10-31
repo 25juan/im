@@ -25,7 +25,7 @@ import {
   InvitationUser,
   ReceiveChatRoomAdminApprovalEVent,
   ReceiveChatRoomAdminRejectEvent,
-  ReceiveApplyJoinChatRoomApprovalEvent,
+  ReceiveApplyJoinChatRoomApprovalEvent, PushEvent,
 } from "./interface" ;
 
 
@@ -508,6 +508,33 @@ class AIM {
   public addReceiveChatRoomAdminApprovalListener(listener:(event: ReceiveChatRoomAdminApprovalEVent)=>void):void{
 
   }
+  /**
+   * 监听推送事件
+   * @param listener 事件触发的回调函数
+   * @category 推送事件
+   */
+  public addPushListener(listener:(event: PushEvent)=>void):void{
+
+  }
+  /**
+   * 注册设备别名
+   * @param alias 事件触发的回调函数
+   * @category 推送相关
+   */
+  public setAlias (alias: string):void {
+
+  }
+
+  /**
+   * 获取当前注册设备的id
+   * @category 推送相关
+   */
+  public getRegistrationID():Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+      resolve()
+    })
+  }
+
 
 }
 

@@ -641,3 +641,22 @@ export interface ReceiveChatRoomAdminApprovalEVent {
    */
   users:[UserInfo]
 }
+export interface PushEvent {
+  /**
+   * 推送消息的id
+   */
+  pushId: string
+  /**
+   * 推送的时间戳
+   */
+  date: number ,
+  /**
+   * 推送的内容
+   */
+  content: string ,
+
+  /**
+   * 推送的额外参数
+   */
+  extra: string
+}

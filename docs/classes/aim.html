@@ -100,6 +100,9 @@
 					<a href="aim.html#addmessageretractlistener" class="tsd-kind-icon">add<wbr>Message<wbr>Retract<wbr>Listener</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="aim.html#addpushlistener" class="tsd-kind-icon">add<wbr>Push<wbr>Listener</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#addreceiptmessagelistener" class="tsd-kind-icon">add<wbr>Receipt<wbr>Message<wbr>Listener</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -166,6 +169,9 @@
 					<a href="aim.html#getmyinfo" class="tsd-kind-icon">get<wbr>MyInfo</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="aim.html#getregistrationid" class="tsd-kind-icon">get<wbr>RegistrationID</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#getuserinfo" class="tsd-kind-icon">get<wbr>User<wbr>Info</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -197,6 +203,9 @@
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#sendmessage" class="tsd-kind-icon">send<wbr>Message</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="aim.html#setalias" class="tsd-kind-icon">set<wbr>Alias</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#setmsghaveread" class="tsd-kind-icon">set<wbr>Msg<wbr>Have<wbr>Read</a>
@@ -274,6 +283,9 @@
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/progressevent.html" class="tsd-kind-icon">Progress<wbr>Event</a>
+		</li>
+		<li class=" tsd-kind-interface">
+			<a href="../interfaces/pushevent.html" class="tsd-kind-icon">Push<wbr>Event</a>
 		</li>
 		<li class=" tsd-kind-interface">
 			<a href="../interfaces/receiveapplyjoinchatroomapprovalevent.html" class="tsd-kind-icon">Receive<wbr>Apply<wbr>Join<wbr>Chat<wbr>Room<wbr>Approval<wbr>Event</a>
@@ -378,6 +390,15 @@
 						<ul class="tsd-index-list">
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#downloadfile" class="tsd-kind-icon">download<wbr>File</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#uploadresource" class="tsd-kind-icon">upload<wbr>Resource</a></li>
+						</ul>
+						<h3>推送事件 Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#addpushlistener" class="tsd-kind-icon">add<wbr>Push<wbr>Listener</a></li>
+						</ul>
+						<h3>推送相关 Methods</h3>
+						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#getregistrationid" class="tsd-kind-icon">get<wbr>RegistrationID</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#setalias" class="tsd-kind-icon">set<wbr>Alias</a></li>
 						</ul>
 						<h3>消息事件 Methods</h3>
 						<ul class="tsd-index-list">
@@ -1103,6 +1124,105 @@
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><a href="../interfaces/errorret.html" class="tsd-signature-type">ErrorRet</a><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>返回文件对应的服务器端的文件id</p>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>推送事件 Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="addpushlistener" class="tsd-anchor"></a>
+				<h3>add<wbr>Push<wbr>Listener</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">add<wbr>Push<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../interfaces/pushevent.html" class="tsd-signature-type">PushEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>监听推送事件</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>listener: <span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../interfaces/pushevent.html" class="tsd-signature-type">PushEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>事件触发的回调函数</p>
+								</div>
+								<ul class="tsd-parameters">
+									<li class="tsd-parameter-signature">
+										<ul class="tsd-signatures tsd-kind-type-literal">
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><a href="../interfaces/pushevent.html" class="tsd-signature-type">PushEvent</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+										</ul>
+										<ul class="tsd-descriptions">
+											<li class="tsd-description">
+												<h4 class="tsd-parameters-title">Parameters</h4>
+												<ul class="tsd-parameters">
+													<li>
+														<h5>event: <a href="../interfaces/pushevent.html" class="tsd-signature-type">PushEvent</a></h5>
+													</li>
+												</ul>
+												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+		</section>
+		<section class="tsd-panel-group tsd-member-group ">
+			<h2>推送相关 Methods</h2>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="getregistrationid" class="tsd-anchor"></a>
+				<h3>get<wbr>RegistrationID</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>RegistrationID<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>获取当前注册设备的id</p>
+							</div>
+						</div>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="setalias" class="tsd-anchor"></a>
+				<h3>set<wbr>Alias</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Alias<span class="tsd-signature-symbol">(</span>alias<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>注册设备别名</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>alias: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>事件触发的回调函数</p>
+								</div>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 					</li>
 				</ul>
 			</section>
