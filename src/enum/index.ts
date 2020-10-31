@@ -6,7 +6,11 @@ export enum UserType {
   /**
    * 管理员
    */
-  ADMIN = "admin"
+  ADMIN = "admin",
+  /**
+   * 群主
+   */
+  OWNER = "owner"
 };
 export enum Gender {
   /**
@@ -90,6 +94,60 @@ export enum ChatType {
   ROOM = "room",
 }
 export enum EventType {
+  /**
+   * 当前消息是im消息
+   */
   MESSAGE = "message",
+  /**
+   * 当前消息是推送消息
+   */
   PUSH = "PUSH" ,
 }
+export enum ChatRoomType {
+  /**
+   * 公共群
+   */
+  PRIVATE = "private",
+  /**
+   * 私有群
+   */
+  PUBLIC = "public"
+}
+
+export enum ContactEventType{
+  /**
+   * 收到添加好友请求事件
+   */
+  RECEIVED = "received",
+  /**
+   * 同意添加好友
+   */
+  ACCEPTED = "accepted",
+  /**
+   * 拒绝添加好友
+   */
+  DECLINED = "declined",
+  /**
+   * 删除好友
+   */
+  DELETE = "deleted",
+}
+export enum LoginEventType{
+  /**
+   * 用户密码变更
+   */
+  PASSWORDCHANGE = "password_change",
+  /**
+   * 用户退出登录
+   */
+  LOGOUT = "logout",
+  /**
+   * 用户被删除
+   */
+  DELETE = "deleted",
+  /**
+   * 用户账户异常
+   */
+  UNEXPECTED = "unexpected",
+}
+

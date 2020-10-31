@@ -169,7 +169,15 @@ export interface UserRet {
   appKey: string
 }
 
-export interface SendMessage extends UserRet {
+export interface SendMessage {
+  /**
+   * 用户名也是登录账号
+   */
+  username: string,
+  /**
+   * appKey 后台申请的唯一appkey
+   */
+  appKey: string
   /**
    * {@link ChatType}
    * 聊天类型
@@ -289,7 +297,7 @@ export interface MessagePagination {
    */
   appKey: string,
   /**
-   *  第一条消息对应的下标，起始为 1
+   *  第一条消息对应的下标，起始为 0
    */
   from: number,
   /**
@@ -300,4 +308,336 @@ export interface MessagePagination {
    * 是否降序（消息时间戳从大到小排序），默认为 false。
    */
   isDescend: boolean,
+}
+export interface DownloadFileMessage {
+  /**
+   * 用户名也是登录账号
+   */
+  username: string,
+  /**
+   * appKey 后台申请的唯一appkey
+   */
+  appKey: string
+
+  /**
+   * 消息id
+   */
+  messageId: string,
+}
+export interface CreateConversation {
+
+  /**
+   * appKey 后台申请的唯一appkey
+   */
+  appKey: string
+  /**
+   * {@link ChatType}
+   * 聊天类型
+   */
+  chatType: string,
+  /**
+   * 对象群组 id。当 type 为 'group' 时，groupId 为必填。
+   */
+  groupId: string,
+
+  /**
+   * 对象聊天室 id。当 type 为 'chatRoom' 时，roomId 为必填。
+   */
+  roomId: string,
+  /**
+   * 用户名也是登录账号
+   * 当 type 为 single 时，username 为必填。
+   */
+  username: string,
+}
+
+export interface Conversation {
+  /**
+   * 会话标题
+   */
+  title: string,
+
+  latestMessage: Message,
+  /**
+   * 未读消息数
+   */
+  unreadCount: number,
+
+  /**
+   * {@link ChatType}
+   * 聊天类型
+   */
+  chatType: string,
+  /**
+   * 聊天对象用户信息
+   */
+  target: UserInfo
+}
+export interface MessageHaveRead {
+  /**
+   * appKey 后台申请的唯一appkey
+   */
+  appKey: string
+  /**
+   * {@link ChatType}
+   * 聊天类型
+   */
+  chatType: string,
+  /**
+   * 对象群组 id。当 type 为 'group' 时，groupId 为必填。
+   */
+  groupId: string,
+
+  /**
+   * 对象聊天室 id。当 type 为 'chatRoom' 时，roomId 为必填。
+   */
+  roomId: string,
+  /**
+   * 用户名也是登录账号
+   * 当 type 为 single 时，username 为必填。
+   */
+  username: string,
+  /**
+   * 消息id
+   */
+  messageId: string,
+}
+ export interface ChatRoomInfo {
+   /**
+    * 聊天类型
+    */
+   chatType: string,
+   /**
+    * 群id
+    */
+   id: string,
+   /**
+    * @{link ChatRoomType}
+    *  公共群和私有群
+    */
+   type: string,
+   /**
+    * 群头像的缩略图地址
+    */
+   avatar: string,
+   /**
+    * 群组名称
+    */
+   chatRoomNickname: string,
+   /**
+    * 群组描述
+    */
+   desc: string,
+   /**
+    * 群组等级，默认等级 4
+    */
+   level: number,
+   /**
+    * 群主的 username
+    */
+   owner: string,
+   /**
+    * 群主的 appKey
+    */
+   ownerAppKey: string,
+   /**
+    * 最大成员数
+    */
+   maxMemberCount: number,
+   /**
+    * 是否免打扰
+    */
+   isNoDisturb: boolean,
+   /**
+    * 是否屏蔽群消息
+    */
+   isBlocked: boolean,
+   /**
+    * 是否被禁言
+    */
+   isForbiddenWords: boolean
+
+ }
+export interface ChatRoomMemberInfo{
+  /**
+   * 群成员用户信息
+   */
+  user: UserInfo,
+  /**
+   * 群昵称
+   */
+  chatRoomNickname: string,
+  /**
+   * @{link UserType}
+   * 用户在群里面的角色（分别对应：  群主 | 管理员 | 普通）
+   */
+  memberType: string,
+  /**
+   * 进群时间戳（毫秒）
+   */
+  joinChatRoomTime: number,
+}
+export interface GroupInfo {
+
+  /**
+   * 聊天类型
+   */
+  chatType: string,
+  /**
+   * 讨论组id
+   */
+  groupId: string,
+  /**
+   * 讨论组昵称
+   */
+  groupNickName: string,
+  /**
+   * 讨论组所属 AppKey
+   */
+  appKey: string,
+  /**
+   * 讨论组创建者
+   */
+  owner: UserInfo,
+  /**
+   * 讨论组最大成员数量
+   */
+  maxMemberCount: number,
+  /**
+   * 讨论组描述
+   */
+  description: string,
+  /**
+   * 讨论组当前成员数量
+   */
+  memberCount: number,
+  /**
+   * 讨论组创建时间戳
+   */
+  createTime: number
+}
+export interface InvitationUser {
+  /**
+   * 对方用户名也是登录账号
+   */
+  username: string,
+  /**
+   * appKey 后台申请的唯一appkey
+   */
+  appKey: string,
+  /**
+   * 申请理由或者拒绝理由
+   */
+  reason: string,
+}
+export interface NoteUser {
+  /**
+   * 对方用户名也是登录账号
+   */
+  username: string,
+  /**
+   * appKey 后台申请的唯一appkey
+   */
+  appKey: string,
+  /**
+   * 备注名。不支持 "\n" 和 "\r" 字符，长度要求为 0 ~ 64 Byte。
+   */
+  noteName: string,
+}
+export interface ContactEvent {
+  /**
+   * {@link ContactEventType}
+   * 事件类型
+   */
+  type:string,
+  /**
+   * 事件发生的理由，该字段由对方发起请求时所填，对方如果未填则返回默认字符串。
+   */
+  reason:string,
+  /**
+   * 事件发送者的 username
+   */
+  fromUsername:string,
+  /**
+   * 事件发送者的 AppKey。
+   */
+  fromUserAppKey:""
+}
+
+export interface LoginEvent {
+  /**
+   * {@link LoginEventType}
+   * 事件类型
+   */
+  type: string
+}
+export interface ProgressEvent {
+  /**
+   * 消息id
+   */
+  messageId: string,
+  /**
+   * 上传进度，从 0-1 float 类型
+   */
+  progress:number
+}
+export interface ReceiveApplyJoinChatRoomApprovalEvent {
+  /**
+   * 事件id
+   */
+  eventId:string,
+  /**
+   * 申请入群的群聊id
+   */
+  roomId:string,
+
+  /**
+   * 是否是用户主动申请入群，true：主动申请加入，false：被邀请加入
+   */
+  isInitiativeApply: boolean
+  /**
+   * 发送申请的用户
+   */
+  sendApplyUser:[UserInfo]
+  /**
+   * 入群原因
+   */
+  reason: string
+}
+export interface ReceiveChatRoomAdminRejectEvent {
+  /**
+   * 事件id
+   */
+  eventId:string,
+  /**
+   * 事件原因
+   */
+  rejectReason:string,
+  /**
+   * 操作的管理员
+   */
+  chatRoomManager:UserInfo
+}
+export interface ReceiveChatRoomAdminApprovalEVent {
+  /**
+   * 管理员是否同意申请，true：同意，false：拒绝.
+   */
+  isAgreeApply:boolean,
+  /**
+   * 申请入群事件的事件 id.
+   */
+  applyEventID:string,
+
+  /**
+   * 群 id.
+   */
+  chatRoomId:string,
+  /**
+   * 操作的管理员
+   */
+  chatRoomAdmin:UserInfo
+  /**
+   * 申请或被邀请加入群的用户，即：实际入群的用户
+   */
+  users:[UserInfo]
 }
