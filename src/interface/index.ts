@@ -561,7 +561,7 @@ export interface ContactEvent {
   /**
    * 事件发送者的 AppKey。
    */
-  fromUserAppKey:""
+  fromUserAppKey:string
 }
 
 export interface LoginEvent {
