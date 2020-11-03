@@ -166,6 +166,9 @@
 					<a href="aim.html#gethistorymessages" class="tsd-kind-icon">get<wbr>History<wbr>Messages</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="aim.html#gethistorypush" class="tsd-kind-icon">get<wbr>History<wbr>Push</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#getmyinfo" class="tsd-kind-icon">get<wbr>MyInfo</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
@@ -209,6 +212,9 @@
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#setmsghaveread" class="tsd-kind-icon">set<wbr>Msg<wbr>Have<wbr>Read</a>
+				</li>
+				<li class=" tsd-kind-method tsd-parent-kind-class">
+					<a href="aim.html#setpushread" class="tsd-kind-icon">set<wbr>Push<wbr>Read</a>
 				</li>
 				<li class=" tsd-kind-method tsd-parent-kind-class">
 					<a href="aim.html#updatefriendnotename" class="tsd-kind-icon">update<wbr>Friend<wbr>Note<wbr>Name</a>
@@ -397,8 +403,10 @@
 						</ul>
 						<h3>推送相关 Methods</h3>
 						<ul class="tsd-index-list">
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#gethistorypush" class="tsd-kind-icon">get<wbr>History<wbr>Push</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#getregistrationid" class="tsd-kind-icon">get<wbr>RegistrationID</a></li>
 							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#setalias" class="tsd-kind-icon">set<wbr>Alias</a></li>
+							<li class="tsd-kind-method tsd-parent-kind-class"><a href="aim.html#setpushread" class="tsd-kind-icon">set<wbr>Push<wbr>Read</a></li>
 						</ul>
 						<h3>消息事件 Methods</h3>
 						<ul class="tsd-index-list">
@@ -627,7 +635,7 @@
 				<a name="getconversations" class="tsd-anchor"></a>
 				<h3>get<wbr>Conversations</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Conversations<span class="tsd-signature-symbol">(</span>conversation<span class="tsd-signature-symbol">: </span><a href="../interfaces/createconversation.html" class="tsd-signature-type">CreateConversation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/conversation.html" class="tsd-signature-type">Conversation</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Conversations<span class="tsd-signature-symbol">(</span>conversation<span class="tsd-signature-symbol">: </span><a href="../interfaces/createconversation.html" class="tsd-signature-type">CreateConversation</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/conversation.html" class="tsd-signature-type">Conversation</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -647,7 +655,7 @@
 								</div>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/conversation.html" class="tsd-signature-type">Conversation</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/conversation.html" class="tsd-signature-type">Conversation</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>会话列表</p>
 					</li>
 				</ul>
@@ -973,7 +981,7 @@
 				<a name="getfriends" class="tsd-anchor"></a>
 				<h3>get<wbr>Friends</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Friends<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Friends<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -984,7 +992,7 @@
 								<p>获取好友列表</p>
 							</div>
 						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>返回用户好友列表</p>
 					</li>
 				</ul>
@@ -993,7 +1001,7 @@
 				<a name="removefromfriendlist" class="tsd-anchor"></a>
 				<h3>remove<wbr>From<wbr>Friend<wbr>List</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">remove<wbr>From<wbr>Friend<wbr>List<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="../interfaces/userret.html" class="tsd-signature-type">UserRet</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">remove<wbr>From<wbr>Friend<wbr>List<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="../interfaces/userret.html" class="tsd-signature-type">UserRet</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1010,7 +1018,7 @@
 								<h5>user: <a href="../interfaces/userret.html" class="tsd-signature-type">UserRet</a></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>返回null 表示从好友列表里面删除好友成功</p>
 					</li>
 				</ul>
@@ -1048,7 +1056,7 @@
 				<a name="updatefriendnotename" class="tsd-anchor"></a>
 				<h3>update<wbr>Friend<wbr>Note<wbr>Name</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">update<wbr>Friend<wbr>Note<wbr>Name<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="../interfaces/noteuser.html" class="tsd-signature-type">NoteUser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">update<wbr>Friend<wbr>Note<wbr>Name<span class="tsd-signature-symbol">(</span>user<span class="tsd-signature-symbol">: </span><a href="../interfaces/noteuser.html" class="tsd-signature-type">NoteUser</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1065,7 +1073,7 @@
 								<h5>user: <a href="../interfaces/noteuser.html" class="tsd-signature-type">NoteUser</a></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/userinfo.html" class="tsd-signature-type">UserInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>返回null 表示更新用户名成功</p>
 					</li>
 				</ul>
@@ -1180,6 +1188,31 @@
 		<section class="tsd-panel-group tsd-member-group ">
 			<h2>推送相关 Methods</h2>
 			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="gethistorypush" class="tsd-anchor"></a>
+				<h3>get<wbr>History<wbr>Push</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">get<wbr>History<wbr>Push<span class="tsd-signature-symbol">(</span>pagination<span class="tsd-signature-symbol">: </span><a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>获取历史推送消息</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>pagination: <a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 				<a name="getregistrationid" class="tsd-anchor"></a>
 				<h3>get<wbr>RegistrationID</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -1223,6 +1256,31 @@
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+				<a name="setpushread" class="tsd-anchor"></a>
+				<h3>set<wbr>Push<wbr>Read</h3>
+				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+					<li class="tsd-signature tsd-kind-icon">set<wbr>Push<wbr>Read<span class="tsd-signature-symbol">(</span>pushId<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+				</ul>
+				<ul class="tsd-descriptions">
+					<li class="tsd-description">
+						<aside class="tsd-sources">
+						</aside>
+						<div class="tsd-comment tsd-typography">
+							<div class="lead">
+								<p>设置推送消息为已读</p>
+							</div>
+						</div>
+						<h4 class="tsd-parameters-title">Parameters</h4>
+						<ul class="tsd-parameters">
+							<li>
+								<h5>pushId: <span class="tsd-signature-type">string</span></h5>
+							</li>
+						</ul>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -1319,7 +1377,7 @@
 				<a name="addreceivechatroommsglistener" class="tsd-anchor"></a>
 				<h3>add<wbr>Receive<wbr>Chat<wbr>Room<wbr>Msg<wbr>Listener</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">add<wbr>Receive<wbr>Chat<wbr>Room<wbr>Msg<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					<li class="tsd-signature tsd-kind-icon">add<wbr>Receive<wbr>Chat<wbr>Room<wbr>Msg<wbr>Listener<span class="tsd-signature-symbol">(</span>listener<span class="tsd-signature-symbol">: </span><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1333,18 +1391,18 @@
 						<h4 class="tsd-parameters-title">Parameters</h4>
 						<ul class="tsd-parameters">
 							<li>
-								<h5>listener: <span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
+								<h5>listener: <span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol"> =&gt; </span><span class="tsd-signature-type">void</span></h5>
 								<ul class="tsd-parameters">
 									<li class="tsd-parameter-signature">
 										<ul class="tsd-signatures tsd-kind-type-literal">
-											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>message<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
 										</ul>
 										<ul class="tsd-descriptions">
 											<li class="tsd-description">
 												<h4 class="tsd-parameters-title">Parameters</h4>
 												<ul class="tsd-parameters">
 													<li>
-														<h5>message: <a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">[]</span></h5>
+														<h5>message: <span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span></h5>
 													</li>
 												</ul>
 												<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
@@ -1408,7 +1466,7 @@
 				<a name="gethistorymessages" class="tsd-anchor"></a>
 				<h3>get<wbr>History<wbr>Messages</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>History<wbr>Messages<span class="tsd-signature-symbol">(</span>pagination<span class="tsd-signature-symbol">: </span><a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>History<wbr>Messages<span class="tsd-signature-symbol">(</span>pagination<span class="tsd-signature-symbol">: </span><a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1425,7 +1483,7 @@
 								<h5>pagination: <a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a></h5>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>返回历史消息的数组</p>
 					</li>
 				</ul>
@@ -1809,7 +1867,7 @@
 				<a name="getchatroomlistbyuser" class="tsd-anchor"></a>
 				<h3>get<wbr>Chat<wbr>Room<wbr>List<wbr>ByUser</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Chat<wbr>Room<wbr>List<wbr>ByUser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/chatroominfo.html" class="tsd-signature-type">ChatRoomInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Chat<wbr>Room<wbr>List<wbr>ByUser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/chatroominfo.html" class="tsd-signature-type">ChatRoomInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1820,7 +1878,7 @@
 								<p>获取当前登录用户所加入或者创建的所有群聊</p>
 							</div>
 						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/chatroominfo.html" class="tsd-signature-type">ChatRoomInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/chatroominfo.html" class="tsd-signature-type">ChatRoomInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>群聊列表</p>
 					</li>
 				</ul>
@@ -1919,7 +1977,7 @@
 				<a name="getgrouplistbyuser" class="tsd-anchor"></a>
 				<h3>get<wbr>Group<wbr>List<wbr>ByUser</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>Group<wbr>List<wbr>ByUser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/groupinfo.html" class="tsd-signature-type">GroupInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>Group<wbr>List<wbr>ByUser<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/groupinfo.html" class="tsd-signature-type">GroupInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1930,7 +1988,7 @@
 								<p>获取当前登录用户所加入或者创建的所有讨论组</p>
 							</div>
 						</div>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-symbol">[</span><a href="../interfaces/groupinfo.html" class="tsd-signature-type">GroupInfo</a><span class="tsd-signature-symbol">]</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/groupinfo.html" class="tsd-signature-type">GroupInfo</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 						<p>讨论组列表</p>
 					</li>
 				</ul>

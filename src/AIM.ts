@@ -197,8 +197,8 @@ class AIM {
    * @returns 返回历史消息的数组
    * @category 消息相关
    */
-  public getHistoryMessages(pagination: MessagePagination): Promise<[Message]> {
-    return new Promise<[Message]>((resolve, reject) => {
+  public getHistoryMessages(pagination: MessagePagination): Promise<Array<Message>> {
+    return new Promise<Array<Message>>((resolve, reject) => {
       resolve(null)
     });
   }
@@ -265,8 +265,8 @@ class AIM {
    * @returns 会话列表
    * @category 会话相关
    */
-  public getConversations(conversation: CreateConversation): Promise<[Conversation]> {
-    return new Promise<[Conversation]>((resolve, reject) => {
+  public getConversations(conversation: CreateConversation): Promise<Array<Conversation>> {
+    return new Promise<Array<Conversation>>((resolve, reject) => {
       resolve(null)
     })
   }
@@ -288,8 +288,8 @@ class AIM {
    * @returns 群聊列表
    * @category 群聊相关
    */
-  public getChatRoomListByUser(): Promise<[ChatRoomInfo]> {
-    return new Promise<[ChatRoomInfo]>((resolve, reject) => {
+  public getChatRoomListByUser(): Promise<Array<ChatRoomInfo>> {
+    return new Promise<Array<ChatRoomInfo>>((resolve, reject) => {
       resolve(null)
     })
   }
@@ -299,8 +299,8 @@ class AIM {
    * @returns 讨论组列表
    * @category 讨论组
    */
-  public getGroupListByUser(): Promise<[GroupInfo]> {
-    return new Promise<[GroupInfo]>((resolve, reject) => {
+  public getGroupListByUser(): Promise<Array<GroupInfo>> {
+    return new Promise<Array<GroupInfo>>((resolve, reject) => {
       resolve(null)
     })
   }
@@ -404,8 +404,8 @@ class AIM {
    * @returns 返回用户好友列表
    * @category 好友相关
    */
-  public getFriends(): Promise<[UserInfo]> {
-    return new Promise<[UserInfo]>((resolve, reject) => {
+  public getFriends(): Promise<Array<UserInfo>> {
+    return new Promise<Array<UserInfo>>((resolve, reject) => {
       resolve(null)
     })
   }
@@ -414,8 +414,8 @@ class AIM {
    * @returns 返回null 表示从好友列表里面删除好友成功
    * @category 好友相关
    */
-  public removeFromFriendList(user: UserRet): Promise<[UserInfo]> {
-    return new Promise<[UserInfo]>((resolve, reject) => {
+  public removeFromFriendList(user: UserRet): Promise<Array<UserInfo>> {
+    return new Promise<Array<UserInfo>>((resolve, reject) => {
       resolve(null)
     })
   }
@@ -424,8 +424,8 @@ class AIM {
    * @returns 返回null 表示更新用户名成功
    * @category 好友相关
    */
-  public updateFriendNoteName(user: NoteUser): Promise<[UserInfo]> {
-    return new Promise<[UserInfo]>((resolve, reject) => {
+  public updateFriendNoteName(user: NoteUser): Promise<Array<UserInfo>> {
+    return new Promise<Array<UserInfo>>((resolve, reject) => {
       resolve(null)
     })
   }
@@ -441,7 +441,7 @@ class AIM {
    * 添加聊天室消息事件的监听。
    * @category 消息事件
    */
-  public addReceiveChatRoomMsgListener(listener: (message: Message[])=>void):void{
+  public addReceiveChatRoomMsgListener(listener: (message: Array<Message>)=>void):void{
 
   }
   /**
@@ -530,6 +530,24 @@ class AIM {
    * @category 推送相关
    */
   public getRegistrationID():Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+      resolve()
+    })
+  }
+  /**
+   * 设置推送消息为已读
+   * @category 推送相关
+   */
+  public setPushRead(pushId:string):Promise<string> {
+    return new Promise<string>((resolve, reject) => {
+      resolve()
+    })
+  }
+  /**
+   * 获取历史推送消息
+   * @category 推送相关
+   */
+  public getHistoryPush(pagination: MessagePagination):Promise<string> {
     return new Promise<string>((resolve, reject) => {
       resolve()
     })
