@@ -1191,7 +1191,7 @@
 				<a name="gethistorypush" class="tsd-anchor"></a>
 				<h3>get<wbr>History<wbr>Push</h3>
 				<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-					<li class="tsd-signature tsd-kind-icon">get<wbr>History<wbr>Push<span class="tsd-signature-symbol">(</span>pagination<span class="tsd-signature-symbol">: </span><a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></li>
+					<li class="tsd-signature tsd-kind-icon">get<wbr>History<wbr>Push<span class="tsd-signature-symbol">(</span>pagination<span class="tsd-signature-symbol">: </span><a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pushevent.html" class="tsd-signature-type">PushEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></li>
 				</ul>
 				<ul class="tsd-descriptions">
 					<li class="tsd-description">
@@ -1206,9 +1206,12 @@
 						<ul class="tsd-parameters">
 							<li>
 								<h5>pagination: <a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>分页参数</p>
+								</div>
 							</li>
 						</ul>
-						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/pushevent.html" class="tsd-signature-type">PushEvent</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>
 					</li>
 				</ul>
 			</section>
@@ -1278,6 +1281,9 @@
 						<ul class="tsd-parameters">
 							<li>
 								<h5>pushId: <span class="tsd-signature-type">string</span></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>推送消息的id</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">&gt;</span></h4>
@@ -1481,6 +1487,9 @@
 						<ul class="tsd-parameters">
 							<li>
 								<h5>pagination: <a href="../interfaces/messagepagination.html" class="tsd-signature-type">MessagePagination</a></h5>
+								<div class="tsd-comment tsd-typography">
+									<p>分页参数</p>
+								</div>
 							</li>
 						</ul>
 						<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><a href="../interfaces/message.html" class="tsd-signature-type">Message</a><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">&gt;</span></h4>

@@ -194,6 +194,7 @@ class AIM {
 
   /**
    * 获取历史消息记录
+   * @param pagination 分页参数
    * @returns 返回历史消息的数组
    * @category 消息相关
    */
@@ -536,6 +537,7 @@ class AIM {
   }
   /**
    * 设置推送消息为已读
+   * @param pushId 推送消息的id
    * @category 推送相关
    */
   public setPushRead(pushId:string):Promise<string> {
@@ -545,10 +547,11 @@ class AIM {
   }
   /**
    * 获取历史推送消息
+   * @param pagination 分页参数
    * @category 推送相关
    */
-  public getHistoryPush(pagination: MessagePagination):Promise<string> {
-    return new Promise<string>((resolve, reject) => {
+  public getHistoryPush(pagination: MessagePagination):Promise<Array<PushEvent>> {
+    return new Promise<Array<PushEvent>>((resolve, reject) => {
       resolve()
     })
   }
